@@ -103,10 +103,10 @@ class CalculatorTest {
 
     }
 
-    /*Teilaufgabe 2
-     @Test
-    @DisplayName("Should display result   the seme number on the screen")
-    void testshowLatestNumber(){
+    //Teilaufgabe 2
+    @Test
+    @DisplayName("Should display the latest value without anny operation on the screen")
+    void testshowLatestValue(){
         Calculator calc = new Calculator();
         calc.pressDigitKey(5);
         calc.pressEqualsKey();
@@ -120,17 +120,16 @@ class CalculatorTest {
      }
 
     @Test
-    @DisplayName("Should display result after made multiplication of two numbers")
-    void testMultiplicationPositivNom(){
+    @DisplayName("should keep memory after first clear")
+    void testCalculatorMemory(){
         Calculator calc = new Calculator();
-        calc.pressDigitKey(5);
-        calc.pressDigitKey(0);
-        calc.pressBinaryOperationKey("x");
-        calc.pressDigitKey(1);
-        calc.pressDigitKey(0);
+        calc.pressDigitKey(7);
+        calc.pressBinaryOperationKey("+");
+        calc.pressClearKey();
+        calc.pressDigitKey(3);
         calc.pressEqualsKey();
 
-        String expected = "500";
+        String expected = "10";
         String  actual = calc.readScreen();
         assertEquals(expected, actual);
 
@@ -138,7 +137,7 @@ class CalculatorTest {
 
 
 
-    }**/
+    }
 
 
 }
