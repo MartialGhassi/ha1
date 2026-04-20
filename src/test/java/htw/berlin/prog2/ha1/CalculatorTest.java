@@ -3,7 +3,7 @@ package htw.berlin.prog2.ha1;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Retro calculator")
 class CalculatorTest {
@@ -88,7 +88,58 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+// Teilaufgabe 1
+    @Test
+    @DisplayName("should display a negative number")
+    void testshowNegativeNumber(){
+        Calculator calc = new Calculator();
+        calc.pressDigitKey(5);
+        calc.pressNegativeKey();
 
-    //TODO hier weitere Tests erstellen
+        String expected = "-5";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+
+    }
+
+    /*Teilaufgabe 2
+     @Test
+    @DisplayName("Should display result   the seme number on the screen")
+    void testshowLatestNumber(){
+        Calculator calc = new Calculator();
+        calc.pressDigitKey(5);
+        calc.pressEqualsKey();
+
+
+        String expected= "5";
+        String actual= calc.readScreen();
+
+        assertEquals(expected,actual);
+
+     }
+
+    @Test
+    @DisplayName("Should display result after made multiplication of two numbers")
+    void testMultiplicationPositivNom(){
+        Calculator calc = new Calculator();
+        calc.pressDigitKey(5);
+        calc.pressDigitKey(0);
+        calc.pressBinaryOperationKey("x");
+        calc.pressDigitKey(1);
+        calc.pressDigitKey(0);
+        calc.pressEqualsKey();
+
+        String expected = "500";
+        String  actual = calc.readScreen();
+        assertEquals(expected, actual);
+
+
+
+
+
+    }**/
+
+
 }
 
