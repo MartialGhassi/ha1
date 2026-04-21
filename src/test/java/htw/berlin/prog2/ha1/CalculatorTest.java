@@ -103,7 +103,7 @@ class CalculatorTest {
 
     }
 
-    //Teilaufgabe 2
+    //Teilaufgabe 2/3
     @Test
     @DisplayName("Should display the latest value without anny operation on the screen")
     void testshowLatestValue(){
